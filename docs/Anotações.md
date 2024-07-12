@@ -64,7 +64,7 @@ Quando criamos devemos cadastrar esse app no settings.py
     16. Aula [OK] A33
     17. Aula [OK] A34
     
-    19. Aula [] A35
-    20. Aula [] A36
+    19. Aula [OK] A36 - 47 - Orme
+    20. Aula [] A37 - 48 
     21. Aula [] A37
     22. Aula [] A38
