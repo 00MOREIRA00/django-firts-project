@@ -126,3 +126,52 @@ cars = Car.objects.all().order_by('-factory_year')
 ```
 
 
+
+
+```
+Nesse caso chamamos o "cars_list" que é a url de carros, mas agora com o atributo name atribuido la no urls
+
+<form method="GET" action="{% url 'cars_list' %}">
+      <input type="text" name="search" placeholder="Buscar Carro...."/>
+      <button type="submit">Buscar</button>
+</form>
+
+
+
+
+> Arquivo URLs
+urlpatterns = [
+    path('admin/', admin.site.urls),
+     path('cars/', cars_views, name='cars_list'),
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+```
+
+
+```
+Usando a Django Template language podemos fazer uma verificação se temos algum resultado para retornar html customizado
+
+    <div>
+        {% if cars %}
+          {% for car in cars %}
+          <h3>{{car.brand}} - {{ car.model }} - {{car.factory_year}}</h3>
+        {% endfor %}
+        {% else %}
+          <p>Carro não encontrado</p>
+        {% endif %}
+    </div>
+
+
+Onde se tivemos a busca dentro do cars ele retorna, e caso contario, irá retornar o "Carro não encontrado"
+```
+
+
+#### Usando template Base
+
+Criamos nosso arquivo base html com todos os elementos html que queremos que seja utilizado em todo o projeto, e após iremos ao arquivo settings conde cadastraremos o local onde se encontra nossa pasta de tamplates.
+
+```
+Na parte de tamplates nós informamos o diretorio
+
+'DIRS': ['app/templates'],
+```
+

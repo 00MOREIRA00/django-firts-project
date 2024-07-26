@@ -1,3 +1,5 @@
+{% extends "base.html" %}
+{% block conteudo %}
 <!doctype html>
 <html lang="pt-br">
   <head>
@@ -7,14 +9,26 @@
 
     <title>Carros Cadastrados</title>
   </head>
-  {% block content %}
+  
   <body>
-    {% for car in cars %}
-      <h3>{{car.brand}} - {{ car.model }} - {{car.factory_year}}</h3>
-    {% endfor %}
+    <form method="GET" action="{% url 'cars_list' %}">
+      <input type="text" name="search" placeholder="Buscar Carro...."/>
+      <button type="submit">Buscar</button>
+    </form>
+
+      <div>
+        {% if cars %}
+          {% for car in cars %}
+          <h3>{{car.brand}} - {{ car.model }} - {{car.factory_year}}</h3>
+        {% endfor %}
+        {% else %}
+          <p>Carro não encontrado</p>
+        {% endif %}
+    </div>
   </body>
-  {% endblock %}
+
 </html>
+{% endblock %}
 
 
 

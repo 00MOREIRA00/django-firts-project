@@ -69,5 +69,13 @@ Quando criamos devemos cadastrar esse app no settings.py
     21. Aula [OK] A38 - 49
     22. Aula [OK] A39 - 50
     23. Aula [OK] A40 - 51
-    24. Aula [] A41 - 52
-    25. Aula [] A42 - 53
+    24. Aula [OK] A41 - 52
+    25. Aula [OK] A42 - 53
+
+    26. Aula [] A43
+    27. Aula [] A44
+    28. Aula [] A45
+    29. Aula [] A46
+    30. Aula [] A47
+
+
